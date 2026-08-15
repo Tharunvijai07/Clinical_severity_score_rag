@@ -1,0 +1,37 @@
+Acute Kidney Injury (AKI) and CKD Thresholds
+AKI Definition (KDIGO Criteria)
+
+Diagnose AKI if any of the following are present:
+
+Increase in serum creatinine ≥ 0.3 mg/dL within 48 hours
+Increase in serum creatinine ≥ 1.5x baseline, known or presumed within prior 7 days
+Urine output < 0.5 mL/kg/hour for 6 hours
+AKI Staging Thresholds
+Stage 1: Creatinine 1.5–1.9x baseline OR ≥ 0.3 mg/dL increase
+Stage 2: Creatinine 2.0–2.9x baseline
+Stage 3: Creatinine ≥ 3.0x baseline OR creatinine ≥ 4.0 mg/dL OR initiation of renal replacement therapy
+Oliguria Threshold
+
+Urine output < 0.5 mL/kg/hour sustained for 6 hours or more indicates oliguric AKI and warrants urgent evaluation.
+
+CKD Staging by eGFR
+Stage 1: eGFR ≥ 90 mL/min/1.73m² with evidence of kidney damage
+Stage 2: eGFR 60–89 mL/min/1.73m²
+Stage 3a: eGFR 45–59 mL/min/1.73m²
+Stage 3b: eGFR 30–44 mL/min/1.73m²
+Stage 4: eGFR 15–29 mL/min/1.73m²
+Stage 5: eGFR < 15 mL/min/1.73m² (kidney failure)
+Indications for Urgent Renal Replacement Therapy
+
+Consider urgent dialysis if any of the following are present:
+
+Refractory hyperkalemia (K+ > 6.5 mEq/L or ECG changes)
+Severe metabolic acidosis (pH < 7.1) unresponsive to medical therapy
+Refractory fluid overload with pulmonary edema
+Uremic complications (encephalopathy, pericarditis, bleeding)
+Red Flags Requiring Immediate Escalation
+Creatinine rise ≥ 0.3 mg/dL within 48 hours (meets AKI diagnostic criterion — see definition above)
+Creatinine > 2.0 mg/dL (absolute value) — significant renal impairment regardless of time course
+K+ > 6.0 mEq/L with ECG changes (severe/life-threatening tier begins ≥ 6.5 mEq/L per KDIGO)
+Anuria (urine output < 100 mL/day)
+Rapidly rising creatinine with concurrent hypotension

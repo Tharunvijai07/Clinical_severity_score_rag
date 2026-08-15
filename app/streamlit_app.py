@@ -425,50 +425,32 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# Tab selector: Upload PDF or Enter Text
-input_tab1, input_tab2 = st.tabs(["📄 Upload PDF Report", "✏️ Enter Text"])
-
+# Upload-only patient data input
 uploaded_file = None
-
-with input_tab1:
-    col_upload, col_info = st.columns([2, 1])
-    with col_upload:
-        uploaded_file = st.file_uploader(
-            "Upload a PDF lab report (blood test, metabolic panel, urine test, etc.)",
-            type=["pdf"],
-            key="pdf_uploader",
-            label_visibility="collapsed",
-        )
-
-    with col_info:
-        st.markdown("""
-        <div class="metric-tile">
-            <div class="metric-value">PDF</div>
-            <div class="metric-label">Accepted Format</div>
-        </div>
-        """, unsafe_allow_html=True)
-        st.caption("Lab reports, metabolic panels, CBCs, urinalyses, LFTs, and more.")
-
-with input_tab2:
-    st.text_area(
-        label="Enter patient clinical data as text",
-        placeholder="Paste or type patient findings, lab values, vital signs, and clinical history here...\n\nExample:\nPatient: 45-year-old male\nLabs:\n  - K+ 7.2 mEq/L (high)\n  - Creatinine 6.8 mg/dL (high)\n  - pH 6.95 (low)\nSymptoms: Shortness of breath, chest pain, nausea",
-        height=200,
-        key="text_input",
+col_upload, col_info = st.columns([2, 1])
+with col_upload:
+    uploaded_file = st.file_uploader(
+        "Upload a PDF lab report (blood test, metabolic panel, urine test, etc.)",
+        type=["pdf"],
+        key="pdf_uploader",
+        label_visibility="collapsed",
     )
-    # If text input has content, use it as the source
-    text_input_value = st.session_state.get("text_input", "").strip()
-    if text_input_value and "extracted_text" not in st.session_state or not st.session_state.extracted_text:
-        st.session_state.extracted_text = text_input_value
-        uploaded_file = None  # Mark that we're using text, not a file
+
+with col_info:
+    st.markdown("""
+    <div class="metric-tile">
+        <div class="metric-value">PDF</div>
+        <div class="metric-label">Accepted Format</div>
+    </div>
+    """, unsafe_allow_html=True)
+    st.caption("Lab reports, metabolic panels, CBCs, urinalyses, LFTs, and more.")
 
 
 # ── Step 2: Extract ───────────────────────────────────────────────────────────
-# Determine if we have input from either PDF upload or text input
+# Input is driven by uploaded PDF only
 has_pdf = uploaded_file is not None
-has_text_input = st.session_state.get("text_input", "").strip() != ""
 
-if has_pdf or has_text_input:
+if has_pdf:
     st.markdown("""
     <div class="step-card">
         <div class="step-label">
@@ -478,24 +460,18 @@ if has_pdf or has_text_input:
     </div>
     """, unsafe_allow_html=True)
 
-    # Auto-extract on upload or use text input
-    if not st.session_state.extracted_text or (has_pdf and st.button("🔄 Re-extract from PDF")):
-        if has_pdf:
-            with st.spinner("Extracting text from PDF…"):
-                from rag.pdf_parser import extract_text_from_pdf
-                try:
-                    raw_bytes = uploaded_file.getvalue()
-                    text = extract_text_from_pdf(raw_bytes)
-                    st.session_state.extracted_text = text
-                    # Save to disk
-                    _save_upload(uploaded_file)
-                except Exception as e:
-                    st.error(f"PDF extraction error: {e}")
-                    st.stop()
-        elif has_text_input:
-            # Text input: already in session_state
-            text = st.session_state.get("text_input", "").strip()
-            st.session_state.extracted_text = text
+    if not st.session_state.extracted_text or st.button("🔄 Re-extract from PDF"):
+        with st.spinner("Extracting text from PDF…"):
+            from rag.pdf_parser import extract_text_from_pdf
+            try:
+                raw_bytes = uploaded_file.getvalue()
+                text = extract_text_from_pdf(raw_bytes)
+                st.session_state.extracted_text = text
+                # Save to disk
+                _save_upload(uploaded_file)
+            except Exception as e:
+                st.error(f"PDF extraction error: {e}")
+                st.stop()
 
     text = st.session_state.extracted_text
     word_count = len(text.split())
@@ -710,6 +686,6 @@ else:
     # Idle state — show instructions
     st.markdown("<br>", unsafe_allow_html=True)
     st.info(
-        "👆 **Upload a patient laboratory report PDF** or **enter clinical data as text** in Step 1 to begin the analysis pipeline.",
+        "👆 **Upload a patient laboratory report PDF** to begin the analysis pipeline.",
         icon="ℹ️",
     )
