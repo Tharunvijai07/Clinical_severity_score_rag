@@ -427,23 +427,14 @@ st.markdown("""
 
 # Upload-only patient data input
 uploaded_file = None
-col_upload, col_info = st.columns([2, 1])
-with col_upload:
-    uploaded_file = st.file_uploader(
-        "Upload a PDF lab report (blood test, metabolic panel, urine test, etc.)",
-        type=["pdf"],
-        key="pdf_uploader",
-        label_visibility="collapsed",
-    )
+uploaded_file = st.file_uploader(
+    "Upload a PDF lab report (blood test, metabolic panel, urine test, etc.)",
+    type=["pdf"],
+    key="pdf_uploader",
+    label_visibility="collapsed",
+)
 
-with col_info:
-    st.markdown("""
-    <div class="metric-tile">
-        <div class="metric-value">PDF</div>
-        <div class="metric-label">Accepted Format</div>
-    </div>
-    """, unsafe_allow_html=True)
-    st.caption("Lab reports, metabolic panels, CBCs, urinalyses, LFTs, and more.")
+st.caption("Lab reports, metabolic panels, CBCs, urinalyses, LFTs, and more.")
 
 
 # ── Step 2: Extract ───────────────────────────────────────────────────────────
@@ -478,7 +469,7 @@ if has_pdf:
     char_count = len(text)
 
     # Metrics row
-    mc1, mc2, mc3 = st.columns(3)
+    mc1, mc2 = st.columns(2)
     with mc1:
         st.markdown(f"""
         <div class="metric-tile">
@@ -490,13 +481,6 @@ if has_pdf:
         <div class="metric-tile">
             <div class="metric-value">{char_count:,}</div>
             <div class="metric-label">Characters</div>
-        </div>""", unsafe_allow_html=True)
-    with mc3:
-        file_type = uploaded_file.name.split(".")[-1].upper() if uploaded_file else "TEXT"
-        st.markdown(f"""
-        <div class="metric-tile">
-            <div class="metric-value">{file_type}</div>
-            <div class="metric-label">Input Type</div>
         </div>""", unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
