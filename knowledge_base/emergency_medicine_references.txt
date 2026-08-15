@@ -1,0 +1,180 @@
+EMERGENCY MEDICINE REFERENCES
+Critical Laboratory Values, Electrolyte Emergencies, and Rapid Clinical Decision Framework
+
+═══════════════════════════════════════════════════════════════════════
+SECTION 1: CRITICAL LABORATORY VALUES (PANIC VALUES)
+═══════════════════════════════════════════════════════════════════════
+
+These values require immediate physician notification and intervention.
+
+COMPLETE BLOOD COUNT (CBC) CRITICAL VALUES:
+  Hemoglobin:
+    • < 7.0 g/dL: Transfusion consideration
+    • < 5.0 g/dL: Critical anemia — immediate transfusion
+    • > 20 g/dL: Polycythemia — hyperviscosity risk
+  
+  WBC:
+    • < 2,000/µL: Severe leukopenia — neutropenic precautions; infection risk
+    • < 500/µL (neutrophils): Profound neutropenia — reverse isolation; empiric antibiotics
+    • > 100,000/µL: Extreme leukocytosis — leukemia vs. leukemoid reaction
+  
+  Platelets:
+    • < 50,000/µL: Significant thrombocytopenia — bleeding risk
+    • < 20,000/µL: Spontaneous bleeding risk — platelet transfusion
+    • < 10,000/µL: Critical — prophylactic platelet transfusion
+
+BASIC METABOLIC PANEL (BMP) CRITICAL VALUES:
+  Sodium (Na+):
+    • < 120 mEq/L: Critical hyponatremia — seizure/coma risk; hypertonic saline
+    • > 160 mEq/L: Critical hypernatremia — cerebral desiccation; careful rehydration
+
+  Potassium (K+):
+    • < 2.5 mEq/L: Critical hypokalemia — arrhythmia risk; IV replacement
+    • < 2.0 mEq/L: Life-threatening — rhabdomyolysis, respiratory failure
+    • > 6.5 mEq/L: Critical hyperkalemia — cardiac arrest risk; immediate treatment
+    • > 7.0 mEq/L: Extreme hyperkalemia — sine wave ECG; emergent dialysis
+  
+  Calcium (Ca2+):
+    • < 6.5 mg/dL: Critical hypocalcemia — tetany, seizures, laryngospasm
+    • > 13.0 mg/dL: Critical hypercalcemia — crisis; aggressive IV hydration
+    • > 15.0 mg/dL: Hypercalcemic emergency — coma risk; dialysis consideration
+  
+  Glucose:
+    • < 40 mg/dL: Critical hypoglycemia — brain injury risk; immediate IV dextrose
+    • < 30 mg/dL: Severe hypoglycemia — potentially irreversible neuronal damage
+    • > 500 mg/dL: Critical hyperglycemia — DKA or HHS
+    • > 800 mg/dL: Extreme — HHS with coma risk
+  
+  Creatinine:
+    • > 4.0 mg/dL: Severe renal failure — nephrology consultation urgent
+    • > 10.0 mg/dL: Critical — dialysis usually indicated
+
+  pH (Arterial):
+    • < 7.2: Severe acidemia — evaluate etiology; consider intubation
+    • < 7.0: Critical acidemia — life-threatening; immediate ICU
+    • > 7.6: Severe alkalemia — evaluate cause; arrhythmia risk
+
+  Bicarbonate (HCO3):
+    • < 10 mEq/L: Critical metabolic acidosis — immediate evaluation
+    • < 6 mEq/L: Extreme acidosis — imminent cardiac arrest
+    • > 45 mEq/L: Critical metabolic alkalosis
+
+  Lactate:
+    • > 4.0 mmol/L: Significant tissue ischemia — shock; immediate resuscitation
+    • > 8.0 mmol/L: Extreme lactic acidosis — very high mortality; ICU mandatory
+    • > 12.0 mmol/L: Near-universal mortality without aggressive intervention
+
+═══════════════════════════════════════════════════════════════════════
+SECTION 2: ELECTROLYTE EMERGENCY MANAGEMENT
+═══════════════════════════════════════════════════════════════════════
+
+HYPERKALEMIA MANAGEMENT PROTOCOL:
+  Step 1 — Stabilise cardiac membrane:
+    Calcium gluconate 1g IV over 10 min (if K+ > 6.5 or ECG changes)
+    Effect: Immediate (1–3 min); duration 30–60 min
+
+  Step 2 — Shift potassium into cells:
+    Insulin (10 units) + Dextrose 50% (50 mL) IV — onset 20 min; duration 4–6h
+    Sodium bicarbonate (if metabolic acidosis present)
+    Albuterol nebulization (adjunct)
+
+  Step 3 — Eliminate potassium:
+    Sodium polystyrene sulfonate or patiromer (bowel resin)
+    Furosemide (if adequate renal function)
+    Hemodialysis (definitive — for severe/refractory cases or renal failure)
+
+HYPONATREMIA MANAGEMENT:
+  Correction rate: No faster than 8–10 mEq/L per 24 hours (osmotic demyelination risk)
+  Severe symptomatic (seizures, coma): Hypertonic saline 3% NaCl — 150 mL over 20 min
+  Target: Raise Na by 4–6 mEq/L in first hour to control acute symptoms
+
+HYPOCALCEMIA EMERGENT TREATMENT:
+  Symptomatic (tetany, seizures): IV calcium gluconate 1–2g over 10–20 min
+  Followed by continuous calcium infusion until stable
+
+═══════════════════════════════════════════════════════════════════════
+SECTION 3: COMPLETE BLOOD COUNT — REFERENCE AND CLINICAL SIGNIFICANCE
+═══════════════════════════════════════════════════════════════════════
+
+HEMOGLOBIN AND HEMATOCRIT:
+  Adults (male): Hgb 13.5–17.5 g/dL; Hct 41–53%
+  Adults (female): Hgb 12.0–15.5 g/dL; Hct 36–46%
+  Anemia classification:
+    Mild: Hgb 10.0–12.0 (female) / 10.0–13.5 (male)
+    Moderate: Hgb 8.0–9.9 g/dL
+    Severe: Hgb 6.5–7.9 g/dL
+    Life-threatening: Hgb < 6.5 g/dL
+
+MEAN CORPUSCULAR VOLUME (MCV):
+  • Normal: 80–100 fL
+  • Microcytic (< 80 fL): Iron deficiency, thalassemia, chronic disease
+  • Macrocytic (> 100 fL): B12/folate deficiency, alcohol, hypothyroidism, medications
+
+DIFFERENTIAL BLOOD COUNT:
+  Neutrophils (normal 45–70%):
+    • Neutrophilia > 75%: Bacterial infection, stress, corticosteroids
+    • Neutropenia < 45% with absolute count < 1500/µL: Infection risk
+    • Bands > 10%: Left shift — active bacterial infection (sepsis)
+  
+  Lymphocytes (normal 20–45%):
+    • Lymphocytosis > 45%: Viral infection, CLL
+    • Lymphopenia < 20%: HIV, immunosuppression, sepsis (poor prognosis marker)
+  
+  Eosinophils (normal 1–4%):
+    • Eosinophilia > 5%: Allergy, parasitic infection, asthma
+    • Hypereosinophilia > 20%: End-organ damage risk (Löffler syndrome)
+
+═══════════════════════════════════════════════════════════════════════
+SECTION 4: URINALYSIS CRITICAL FINDINGS
+═══════════════════════════════════════════════════════════════════════
+
+PROTEIN:
+  • Trace to 1+: May be benign (orthostatic, fever)
+  • 2+ to 3+ (> 100 mg/dL): Significant proteinuria — kidney disease or pre-eclampsia
+  • 4+ (> 500 mg/dL): Heavy proteinuria — nephrotic syndrome investigation
+
+GLUCOSE IN URINE:
+  • Present when serum glucose > 180 mg/dL (renal threshold)
+  • Positive dipstick without hyperglycemia: Renal glycosuria (benign or Fanconi syndrome)
+
+NITRITES AND LEUKOCYTE ESTERASE:
+  • Both positive: High probability of UTI (sensitivity ~75%; specificity ~82%)
+  • Leukocyte esterase positive alone: Pyuria; culture required
+
+SPECIFIC GRAVITY:
+  • < 1.003: Very dilute urine — diabetes insipidus or excess fluid intake
+  • > 1.030: Very concentrated — dehydration or SIADH
+  
+BLOOD IN URINE:
+  • Positive dipstick (hemoglobin): Hematuria, hemoglobinuria, or myoglobinuria
+  • RBC > 5/HPF on microscopy: Significant hematuria — evaluate for nephrolithiasis, glomerulonephritis, malignancy
+
+═══════════════════════════════════════════════════════════════════════
+SECTION 5: RAPID SEVERITY FRAMEWORK — EMERGENCY TRIAGE
+═══════════════════════════════════════════════════════════════════════
+
+SEVERITY CLASSIFICATION BY NUMBER OF CRITICAL ABNORMALITIES:
+  
+  LOW SEVERITY (Score 1–3):
+    • 0 critical values; mild abnormalities only
+    • All vital signs within acceptable range
+    • No organ dysfunction markers
+    • Management: Outpatient follow-up; repeat labs in 1–4 weeks
+
+  MODERATE SEVERITY (Score 4–6):
+    • 1–2 abnormal values outside reference range (not panic values)
+    • Single organ system involvement
+    • Stable vital signs
+    • Management: Hospital observation; same-day specialist consultation
+
+  HIGH SEVERITY (Score 7–8):
+    • 1–2 panic/critical values OR multiple significant abnormalities
+    • Evidence of 1–2 organ system dysfunction
+    • Abnormal vital signs with hemodynamic response
+    • Management: Hospital admission; urgent specialist involvement
+
+  CRITICAL SEVERITY (Score 9–10):
+    • ≥ 3 critical/panic values OR life-threatening single value
+    • Multi-organ dysfunction (≥ 2 organ systems)
+    • Hemodynamic instability
+    • Management: ICU admission; immediate intervention; multi-disciplinary team activation

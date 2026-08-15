@@ -1,0 +1,149 @@
+CRITICAL CARE PROTOCOLS AND ICU MANAGEMENT GUIDELINES
+Society of Critical Care Medicine (SCCM) — Integrated Reference
+
+═══════════════════════════════════════════════════════════════════════
+SECTION 1: ICU ADMISSION CRITERIA
+═══════════════════════════════════════════════════════════════════════
+
+LEVEL 1 — DIRECT ICU ADMISSION (immediate life-threatening):
+  • Cardiopulmonary arrest requiring CPR
+  • Respiratory failure requiring mechanical ventilation
+  • Systolic BP < 90 mmHg despite fluid resuscitation (shock)
+  • Altered mental status (GCS < 8) with aspiration risk
+  • Acute MI with cardiogenic shock
+  • Status epilepticus
+  • Severe sepsis/septic shock (lactate > 4 mmol/L)
+  • Multi-organ failure (≥ 2 organ systems failing)
+
+LEVEL 2 — STEP-DOWN / HIGH-DEPENDENCY UNIT:
+  • Hemodynamically unstable, monitoring required, not on vasopressors
+  • Oxygen requirement > 40% FiO2 but no mechanical ventilation
+  • Severe metabolic derangement with treatment initiated
+  • Post-operative high-risk surgical patients
+
+MULTI-ORGAN DYSFUNCTION SYNDROME (MODS) CRITERIA:
+  Defined as failure of ≥ 2 of the following organ systems:
+  • Respiratory: PaO2/FiO2 < 200 (on mechanical ventilation)
+  • Cardiovascular: MAP < 70 mmHg or vasopressor requirement
+  • Renal: Creatinine > 3.5 mg/dL or urine output < 0.5 mL/kg/h for 6 hours
+  • Hepatic: Bilirubin > 6 mg/dL
+  • Hematologic: Platelet count < 80,000/µL or INR > 2.0
+  • Neurological: GCS < 10
+
+  MODS mortality estimates:
+    • 2 organs failing: ~30–40% mortality
+    • 3 organs failing: ~60–70% mortality
+    • 4 or more organs failing: > 80% mortality
+
+═══════════════════════════════════════════════════════════════════════
+SECTION 2: HEMODYNAMIC MONITORING AND TARGETS
+═══════════════════════════════════════════════════════════════════════
+
+BLOOD PRESSURE:
+  • Mean Arterial Pressure (MAP) target in ICU: ≥ 65 mmHg
+  • MAP < 65 mmHg despite vasopressors: Refractory shock — extremely high mortality
+  • Systolic BP < 90 mmHg: Hypotension — evaluate for shock
+  • Systolic BP < 70 mmHg: Severe hypotension — immediate resuscitation
+  • Hypertensive emergency: SBP > 180 mmHg or MAP > 130 with end-organ damage
+
+HEART RATE:
+  • Normal: 60–100 beats/min
+  • Tachycardia (> 100): Investigate fever, pain, hypovolemia, sepsis, arrhythmia
+  • Severe tachycardia (> 150): Hemodynamic instability likely; cardioversion consideration
+  • Bradycardia (< 50 with symptoms): Cardiac pacing may be required
+
+RESPIRATORY RATE AND OXYGENATION:
+  • Normal SpO2 target in ICU: 92–96% (avoid hyperoxia)
+  • SpO2 < 90%: Hypoxemia — supplemental oxygen; consider mechanical ventilation
+  • SpO2 < 85%: Critical hypoxemia — immediate intubation in most cases
+  • Respiratory rate > 30 breaths/min: Impending respiratory failure
+  • PaO2/FiO2 < 300: Mild ARDS
+  • PaO2/FiO2 < 200: Moderate ARDS — high-flow oxygen or non-invasive ventilation
+  • PaO2/FiO2 < 100: Severe ARDS — mechanical ventilation mandatory
+
+TEMPERATURE:
+  • Normothermia target: 36–37.5°C
+  • Fever (> 38.3°C): Evaluate for infection; blood cultures; antibiotics if sepsis suspected
+  • Hyperthermia (> 41°C): Malignant hyperthermia or heat stroke — medical emergency
+  • Hypothermia (< 36°C): Assess for sepsis (particularly in elderly/immunocompromised), exposure
+
+═══════════════════════════════════════════════════════════════════════
+SECTION 3: GLYCEMIC CONTROL IN CRITICAL ILLNESS
+═══════════════════════════════════════════════════════════════════════
+
+BLOOD GLUCOSE TARGETS (ICU):
+  • Target range: 140–180 mg/dL (NICE-SUGAR trial evidence)
+  • Hypoglycemia (< 70 mg/dL): Dangerous; immediate dextrose administration
+  • Severe hypoglycemia (< 40 mg/dL): Critical — may cause irreversible neuronal damage
+  • Hyperglycemia (> 180 mg/dL): Insulin infusion protocol activation
+  • Severe hyperglycemia (> 300 mg/dL): Assess for DKA or HHS
+  • Extreme hyperglycemia (> 600 mg/dL): Hyperosmolar crisis — aggressive management
+
+DIABETIC KETOACIDOSIS (DKA) CRITERIA:
+  • Blood glucose > 250 mg/dL (sometimes lower in euglycemic DKA)
+  • pH < 7.3
+  • Serum bicarbonate < 18 mEq/L
+  • Elevated anion gap (> 12)
+  • Serum/urine ketones positive
+  DKA Severity:
+    Mild: pH 7.25–7.30; HCO3 15–18
+    Moderate: pH 7.00–7.24; HCO3 10–15 (hospital admission)
+    Severe: pH < 7.00; HCO3 < 10 (ICU required)
+
+HYPEROSMOLAR HYPERGLYCEMIC STATE (HHS):
+  • Glucose > 600 mg/dL
+  • Serum osmolality > 320 mOsm/kg
+  • Minimal ketoacidosis (pH > 7.3, HCO3 > 15)
+  • Mortality 10–20%; requires ICU admission
+
+═══════════════════════════════════════════════════════════════════════
+SECTION 4: COAGULATION AND BLEEDING IN CRITICAL CARE
+═══════════════════════════════════════════════════════════════════════
+
+COAGULATION REFERENCE RANGES:
+  • PT: 11–13.5 seconds (INR 0.9–1.1 normal)
+  • aPTT: 25–35 seconds
+  • Fibrinogen: 200–400 mg/dL
+  • D-dimer: < 500 ng/mL FEU
+
+ANTICOAGULATION AND BLEEDING THRESHOLDS:
+  • INR > 1.5: Elevated bleeding risk; FFP consideration before invasive procedures
+  • INR > 2.0: Significant coagulopathy; restrict invasive procedures without correction
+  • INR > 3.5: High bleeding risk; requires correction before surgery
+  • Platelet < 50,000/µL: Platelet transfusion before procedures
+  • Platelet < 10,000/µL: Spontaneous bleeding risk; prophylactic platelet transfusion
+
+ANEMIA IN CRITICAL ILLNESS:
+  • Hemoglobin (Hgb) target in ICU: 7–9 g/dL (restrictive transfusion strategy)
+  • Hgb < 7 g/dL: RBC transfusion indicated (liberal strategy for ACS: < 8 g/dL)
+  • Hgb < 5 g/dL: Critical anemia — immediate transfusion required
+  • Hematocrit < 21%: Severe anemia — hemodynamic instability expected
+  
+═══════════════════════════════════════════════════════════════════════
+SECTION 5: ACID-BASE DISORDERS IN CRITICAL CARE
+═══════════════════════════════════════════════════════════════════════
+
+ARTERIAL BLOOD GAS (ABG) REFERENCE RANGES:
+  • pH: 7.35–7.45
+  • PaO2: 80–100 mmHg
+  • PaCO2: 35–45 mmHg
+  • HCO3: 22–26 mEq/L
+  • Base excess: -2 to +2 mEq/L
+
+METABOLIC ACIDOSIS:
+  • pH < 7.35 + low HCO3: Metabolic acidosis
+  • Anion gap (AG) = Na – (Cl + HCO3); Normal: 8–12 mEq/L
+  • Elevated AG (> 12): MUDPILES causes (Methanol, Uremia, DKA, Propylene glycol, Isoniazid, Lactic acidosis, Ethylene glycol, Salicylates)
+  • pH < 7.2: Severe acidemia — consider bicarbonate therapy
+  • pH < 7.1: Critical acidemia — mechanical ventilation often required
+
+METABOLIC ALKALOSIS:
+  • pH > 7.45 + elevated HCO3: Metabolic alkalosis
+  • Common causes: Vomiting, diuretic use, nasogastric drainage
+
+RESPIRATORY ACIDOSIS:
+  • pH < 7.35 + elevated PaCO2: Respiratory acidosis — hypoventilation
+  • PaCO2 > 55 mmHg with altered mental status: Ventilatory failure
+
+RESPIRATORY ALKALOSIS:
+  • pH > 7.45 + low PaCO2: Hyperventilation (pain, anxiety, PE, early sepsis)

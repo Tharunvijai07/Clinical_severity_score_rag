@@ -1,0 +1,130 @@
+KIDNEY DISEASE CLINICAL GUIDELINES
+KDIGO (Kidney Disease: Improving Global Outcomes) — Integrated Reference
+
+═══════════════════════════════════════════════════════════════════════
+SECTION 1: ACUTE KIDNEY INJURY (AKI) — DEFINITION AND STAGING
+═══════════════════════════════════════════════════════════════════════
+
+AKI is defined as any of the following (KDIGO 2012):
+  • Increase in serum creatinine by ≥ 0.3 mg/dL (≥ 26.5 µmol/L) within 48 hours
+  • Increase in serum creatinine to ≥ 1.5 times baseline within the prior 7 days
+  • Urine volume < 0.5 mL/kg/h for ≥ 6 hours
+
+AKI STAGING (KDIGO):
+
+Stage 1 — MILD AKI:
+  • Serum creatinine: 1.5–1.9× baseline OR increase ≥ 0.3 mg/dL
+  • Urine output: < 0.5 mL/kg/h for 6–12 hours
+  • Management: Identify and correct reversible causes; volume assessment
+
+Stage 2 — MODERATE AKI:
+  • Serum creatinine: 2.0–2.9× baseline
+  • Urine output: < 0.5 mL/kg/h for ≥ 12 hours
+  • Management: Nephrology consultation; avoid nephrotoxins; close monitoring
+
+Stage 3 — SEVERE AKI:
+  • Serum creatinine: ≥ 3.0× baseline OR serum creatinine ≥ 4.0 mg/dL (354 µmol/L)
+  • Urine output: < 0.3 mL/kg/h for ≥ 24 hours OR anuria for ≥ 12 hours
+  • Initiation of renal replacement therapy (RRT)
+  • Management: Urgent nephrology consultation; consider RRT; ICU-level care
+
+CRITICAL CREATININE THRESHOLDS:
+  • Creatinine > 2.0 mg/dL: Significant renal impairment — requires medical attention
+  • Creatinine > 3.0 mg/dL: Severe AKI — hospital admission mandatory
+  • Creatinine > 5.0 mg/dL: Critical — indicates severe renal dysfunction, dialysis often required
+  • Creatinine > 8.0 mg/dL: Life-threatening — immediate nephrology and ICU involvement
+
+BLOOD UREA NITROGEN (BUN) THRESHOLDS:
+  • BUN > 20 mg/dL: Above normal; monitor closely
+  • BUN > 40 mg/dL: Moderate azotemia; evaluate for renal impairment
+  • BUN > 80 mg/dL: Severe azotemia; uremia risk
+  • BUN > 100 mg/dL: Critical uremia — consider dialysis
+  BUN/Creatinine ratio > 20:1 suggests pre-renal etiology
+
+═══════════════════════════════════════════════════════════════════════
+SECTION 2: CHRONIC KIDNEY DISEASE (CKD) — GFR STAGING
+═══════════════════════════════════════════════════════════════════════
+
+CKD STAGES (eGFR in mL/min/1.73m²):
+
+G1 — Normal or high: eGFR ≥ 90 (with evidence of kidney damage)
+G2 — Mildly decreased: eGFR 60–89
+G3a — Mild to moderately decreased: eGFR 45–59
+G3b — Moderately to severely decreased: eGFR 30–44
+G4 — Severely decreased: eGFR 15–29 (prepare for renal replacement therapy)
+G5 — Kidney failure: eGFR < 15 (dialysis or transplant required)
+
+CKD SEVERITY BY eGFR:
+  • eGFR > 60: Low severity — monitor annually
+  • eGFR 30–59: Moderate severity — monitor every 3–6 months; restrict nephrotoxins
+  • eGFR 15–29: High severity — refer to transplant program; manage complications
+  • eGFR < 15: Critical — kidney failure; initiate renal replacement therapy
+
+═══════════════════════════════════════════════════════════════════════
+SECTION 3: ELECTROLYTE ABNORMALITIES IN KIDNEY DISEASE
+═══════════════════════════════════════════════════════════════════════
+
+HYPERKALEMIA (High Potassium — K+):
+  • Normal range: 3.5–5.0 mEq/L
+  • Mild hyperkalemia: 5.1–5.9 mEq/L — dietary modification; close monitoring
+  • Moderate hyperkalemia: 6.0–6.4 mEq/L — medical management; ECG monitoring required
+  • Severe hyperkalemia: ≥ 6.5 mEq/L — LIFE-THREATENING; immediate treatment (calcium gluconate, insulin-dextrose, dialysis)
+  • Potassium > 7.0 mEq/L: Cardiac arrest risk; emergency intervention mandatory
+  ECG changes: peaked T waves → widened QRS → sine wave pattern → VF
+
+HYPONATREMIA (Low Sodium — Na+):
+  • Normal range: 136–145 mEq/L
+  • Mild: Na+ 130–135 mEq/L
+  • Moderate: Na+ 125–129 mEq/L — monitor carefully; correct underlying cause
+  • Severe: Na+ < 125 mEq/L — symptomatic; risk of cerebral edema
+  • Critical: Na+ < 120 mEq/L — emergency; hypertonic saline infusion
+
+METABOLIC ACIDOSIS IN RENAL FAILURE:
+  • Serum bicarbonate < 22 mEq/L: Mild acidosis
+  • Serum bicarbonate < 18 mEq/L: Moderate acidosis; oral bicarbonate replacement
+  • Serum bicarbonate < 15 mEq/L: Severe acidosis
+  • pH < 7.3 with anion gap elevation: Anion gap metabolic acidosis — urgent evaluation
+  • pH < 7.2: Severe acidemia — intensive intervention required
+  • pH < 7.0: Critical acidemia — life-threatening; immediate mechanical ventilation consideration
+
+PHOSPHATE ABNORMALITIES:
+  • Hyperphosphatemia (>4.5 mg/dL): Common in CKD; contributes to secondary hyperparathyroidism
+  • Phosphate > 6.0 mg/dL: Significant; dietary restriction and phosphate binders indicated
+  • Calcium × Phosphate product > 55: Calcification risk
+
+═══════════════════════════════════════════════════════════════════════
+SECTION 4: URINALYSIS INDICATORS IN RENAL DISEASE
+═══════════════════════════════════════════════════════════════════════
+
+PROTEINURIA:
+  • Urine protein/creatinine ratio (UPCR):
+    - < 0.2: Normal
+    - 0.2–0.5: Mild proteinuria — monitor
+    - 0.5–3.5: Moderate to heavy proteinuria — nephrology referral
+    - > 3.5 g/g (nephrotic range): Severe — nephrotic syndrome evaluation
+
+  • 24-hour urine protein:
+    - < 150 mg/day: Normal
+    - 150–500 mg/day: Mild
+    - 500–3500 mg/day: Moderate
+    - > 3500 mg/day: Nephrotic range — aggressive management
+
+HEMATURIA:
+  • > 3 RBC/HPF on two of three urinalyses: Significant hematuria — evaluate for glomerulonephritis or malignancy
+  • Dysmorphic RBCs or RBC casts: Glomerular bleeding — nephritic syndrome
+
+CASTS:
+  • RBC casts: Glomerulonephritis (critical finding)
+  • WBC casts: Pyelonephritis or interstitial nephritis
+  • Granular or muddy brown casts: Acute tubular necrosis (ATN)
+
+═══════════════════════════════════════════════════════════════════════
+SECTION 5: AKI INDICATIONS FOR DIALYSIS (AEIOU)
+═══════════════════════════════════════════════════════════════════════
+
+Emergency dialysis is indicated for:
+  A — Acidosis: pH < 7.1 refractory to medical management
+  E — Electrolytes: Life-threatening hyperkalemia (K+ > 6.5 mEq/L) unresponsive to treatment
+  I — Intoxications: Certain toxic ingestions (methanol, ethylene glycol, lithium, salicylates)
+  O — Overload: Volume overload causing pulmonary edema refractory to diuretics
+  U — Uremia: BUN > 100 mg/dL with uremic encephalopathy, pericarditis, or bleeding

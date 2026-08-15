@@ -1,0 +1,157 @@
+LIVER FAILURE AND HEPATIC DYSFUNCTION CLINICAL GUIDELINES
+AASLD/EASL Guidelines — Acute Liver Failure, Chronic Liver Disease, and Cirrhosis
+
+═══════════════════════════════════════════════════════════════════════
+SECTION 1: LIVER FUNCTION TEST INTERPRETATION
+═══════════════════════════════════════════════════════════════════════
+
+ALANINE AMINOTRANSFERASE (ALT — Liver-specific):
+  • Normal: 7–56 U/L (males); 7–45 U/L (females)
+  • Mild elevation (< 3× ULN): Non-specific — fatty liver, medication, mild hepatitis
+  • Moderate elevation (3–10× ULN): Significant hepatocellular injury — evaluate further
+  • Severe elevation (> 10× ULN): Severe hepatocellular damage (hepatitis, ischemia, toxin)
+  • Critical elevation (> 1000 U/L): Acute severe hepatitis or ischemic hepatitis (shock liver)
+  • Very critical (> 3000 U/L): Massive hepatic necrosis — acute liver failure risk
+
+ASPARTATE AMINOTRANSFERASE (AST):
+  • Normal: 10–40 U/L
+  • AST/ALT ratio > 2:1: Suggests alcoholic liver disease
+  • AST/ALT ratio < 1: Suggests viral hepatitis or NAFLD
+  • Very high AST (> 1000 U/L): Acute hepatocellular injury — ischemia, toxin, viral
+
+BILIRUBIN (TOTAL):
+  • Normal: 0.3–1.2 mg/dL (5–21 µmol/L)
+  • Mild elevation: 1.2–3.0 mg/dL — subclinical jaundice
+  • Moderate (3.0–10.0 mg/dL): Clinical jaundice — hepatic or cholestatic cause
+  • Severe (> 10.0 mg/dL): Significant hepatic dysfunction or cholestasis
+  • Critical (> 20.0 mg/dL): Indicates severe hepatic failure or acute cholangitis
+  • Very critical (> 30.0 mg/dL): Fulminant hepatic failure; liver transplant evaluation
+
+ALKALINE PHOSPHATASE (ALP):
+  • Normal: 44–147 U/L
+  • Elevated (> 3× ULN): Cholestatic pattern — bile duct obstruction, primary biliary cholangitis
+  • Isolated elevation: Consider bone disease, pregnancy
+
+GAMMA-GLUTAMYL TRANSFERASE (GGT):
+  • Normal: 8–61 U/L (males); 5–36 U/L (females)
+  • Elevated with ALP: Confirms hepatic origin of ALP elevation
+  • Isolated GGT elevation: Alcohol use, medications, fatty liver
+
+ALBUMIN:
+  • Normal: 3.5–5.0 g/dL
+  • Mild decrease (3.0–3.5 g/dL): Early hepatic synthetic dysfunction or malnutrition
+  • Moderate decrease (2.5–3.0 g/dL): Significant hepatic dysfunction
+  • Severe decrease (< 2.5 g/dL): Advanced liver disease; ascites risk; critical synthetic failure
+  • Critical (< 2.0 g/dL): Severe malnutrition or end-stage liver disease
+
+PROTHROMBIN TIME (PT) / INR:
+  • Normal PT: 11–13.5 seconds; INR: 0.9–1.1
+  • INR > 1.5: Coagulopathy — reduced hepatic factor synthesis
+  • INR > 2.0: Significant coagulopathy — liver disease or vitamin K deficiency
+  • INR > 3.0: Severe coagulopathy — acute liver failure criterion met
+  • INR > 6.5: King's College Criteria threshold for poor prognosis in acetaminophen-induced ALF
+
+═══════════════════════════════════════════════════════════════════════
+SECTION 2: ACUTE LIVER FAILURE (ALF)
+═══════════════════════════════════════════════════════════════════════
+
+DEFINITION:
+  • Rapid development of hepatocellular dysfunction (coagulopathy INR ≥ 1.5)
+  • Encephalopathy in a patient without prior liver disease
+  • Duration < 26 weeks
+
+CAUSES (by frequency): Acetaminophen toxicity, viral hepatitis (A, B, E),
+drug-induced liver injury (DILI), ischemic hepatitis, Wilson's disease
+
+KING'S COLLEGE CRITERIA (acetaminophen-induced ALF — poor prognosis):
+  • Arterial pH < 7.3 after resuscitation, OR
+  • ALL THREE of:
+    - INR > 6.5 (PT > 100 seconds)
+    - Creatinine > 3.4 mg/dL
+    - Grade III–IV encephalopathy
+
+KING'S COLLEGE CRITERIA (non-acetaminophen ALF):
+  • INR > 6.5 (PT > 100 sec), OR
+  • THREE or more of:
+    - Age < 10 or > 40 years
+    - Duration jaundice to encephalopathy > 7 days
+    - Bilirubin > 17.5 mg/dL
+    - INR > 3.5
+    - Unfavorable etiology (Wilson's disease, DILI, seronegative)
+
+═══════════════════════════════════════════════════════════════════════
+SECTION 3: CHILD-PUGH SCORE (CIRRHOSIS SEVERITY)
+═══════════════════════════════════════════════════════════════════════
+
+Parameters and scoring (1–3 points each):
+
+1. BILIRUBIN (total, mg/dL):
+   • < 2: 1 point
+   • 2–3: 2 points
+   • > 3: 3 points
+
+2. ALBUMIN (g/dL):
+   • > 3.5: 1 point
+   • 2.8–3.5: 2 points
+   • < 2.8: 3 points
+
+3. PROTHROMBIN TIME (INR):
+   • < 1.7: 1 point
+   • 1.7–2.3: 2 points
+   • > 2.3: 3 points
+
+4. ASCITES:
+   • None: 1 point
+   • Mild: 2 points
+   • Moderate–severe: 3 points
+
+5. HEPATIC ENCEPHALOPATHY:
+   • None: 1 point
+   • Grade I–II: 2 points
+   • Grade III–IV: 3 points
+
+CHILD-PUGH CLASS:
+  • Class A (5–6 points): Well-compensated disease; 1-year survival ~100%
+  • Class B (7–9 points): Significant functional compromise; 1-year survival ~80%
+  • Class C (10–15 points): Decompensated cirrhosis; 1-year survival ~45%
+  Child-Pugh C: Liver transplant evaluation mandatory
+
+═══════════════════════════════════════════════════════════════════════
+SECTION 4: MELD SCORE (MODEL FOR END-STAGE LIVER DISEASE)
+═══════════════════════════════════════════════════════════════════════
+
+Formula: MELD = 3.78 × ln(bilirubin) + 11.2 × ln(INR) + 9.57 × ln(creatinine) + 6.43
+
+MELD SCORE INTERPRETATION:
+  • MELD < 10: Low severity; 90-day mortality ~2%
+  • MELD 10–19: Moderate; 90-day mortality ~6%
+  • MELD 20–29: Moderate-severe; 90-day mortality ~20%
+  • MELD 30–39: Severe; 90-day mortality ~53%
+  • MELD ≥ 40: Critical; 90-day mortality ~71%
+  MELD ≥ 15: Survival benefit from liver transplantation
+  MELD ≥ 25: High priority on transplant waitlist
+
+═══════════════════════════════════════════════════════════════════════
+SECTION 5: COMPLICATIONS OF CIRRHOSIS
+═══════════════════════════════════════════════════════════════════════
+
+HEPATIC ENCEPHALOPATHY:
+  Grade I: Trivial lack of awareness, shortened attention
+  Grade II: Lethargy, disorientation, obvious personality change
+  Grade III: Somnolent but arousable, gross disorientation
+  Grade IV: Coma — cannot be awakened
+
+SPONTANEOUS BACTERIAL PERITONITIS (SBP):
+  • PMN count in ascitic fluid ≥ 250 cells/µL: Diagnostic
+  • First-line treatment: Third-generation cephalosporins (cefotaxime)
+  • Prophylaxis: Norfloxacin or trimethoprim-sulfamethoxazole in high-risk patients
+
+HEPATORENAL SYNDROME (HRS):
+  Type 1 (HRS-AKI): Rapidly progressive; creatinine doubling > 2.5 mg/dL in < 2 weeks
+  Type 2 (HRS-CKD): Moderate, steady renal failure with refractory ascites
+  Diagnosis requires: Cirrhosis + ascites + creatinine > 1.5 mg/dL + no improvement after 48h albumin + no shock + no nephrotoxins
+
+VARICEAL BLEEDING:
+  • Active variceal bleeding: Mortality 10–20% per episode
+  • Management: Octreotide + endoscopic band ligation + antibiotic prophylaxis
+  • TIPS consideration if refractory bleeding

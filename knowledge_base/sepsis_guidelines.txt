@@ -1,0 +1,158 @@
+SEPSIS AND SEPTIC SHOCK CLINICAL GUIDELINES
+Sepsis-3 Definitions, SOFA Scoring, and Management Protocols
+
+═══════════════════════════════════════════════════════════════════════
+SECTION 1: SEPSIS DEFINITIONS (SEPSIS-3, 2016)
+═══════════════════════════════════════════════════════════════════════
+
+SEPSIS:
+  Definition: Life-threatening organ dysfunction caused by a dysregulated host
+  response to infection.
+  Diagnostic Criterion: Suspected infection + acute change in total SOFA score ≥ 2 points
+  (assumed baseline SOFA score of 0 in patients without pre-existing organ dysfunction)
+
+SEPTIC SHOCK:
+  Definition: Subset of sepsis with circulatory and cellular/metabolic dysfunction
+  associated with greater risk of mortality.
+  Diagnostic Criteria (both required):
+    • Vasopressor requirement to maintain MAP ≥ 65 mmHg
+    • Serum lactate > 2 mmol/L despite adequate fluid resuscitation
+  Mortality: > 40% in-hospital
+
+SYSTEMIC INFLAMMATORY RESPONSE SYNDROME (SIRS) — historical, no longer definitional:
+  Two or more of:
+    • Temperature > 38°C or < 36°C
+    • Heart rate > 90 beats/min
+    • Respiratory rate > 20 breaths/min or PaCO2 < 32 mmHg
+    • WBC > 12,000/µL or < 4,000/µL or > 10% bands
+
+═══════════════════════════════════════════════════════════════════════
+SECTION 2: SOFA SCORE (SEQUENTIAL ORGAN FAILURE ASSESSMENT)
+═══════════════════════════════════════════════════════════════════════
+
+The SOFA score grades dysfunction in 6 organ systems (0–4 per system):
+
+1. RESPIRATION (PaO2/FiO2 ratio):
+   • ≥ 400: Score 0 (normal)
+   • 300–399: Score 1 (mild impairment)
+   • 200–299: Score 2 (moderate, with respiratory support)
+   • 100–199: Score 3 (severe, with respiratory support)
+   • < 100: Score 4 (critical)
+
+2. COAGULATION (Platelets ×10³/µL):
+   • ≥ 150: Score 0
+   • 100–149: Score 1
+   • 50–99: Score 2
+   • 20–49: Score 3
+   • < 20: Score 4 (critical thrombocytopenia — major bleeding risk)
+
+3. LIVER (Bilirubin mg/dL):
+   • < 1.2: Score 0 (normal)
+   • 1.2–1.9: Score 1
+   • 2.0–5.9: Score 2 (moderate hepatic dysfunction)
+   • 6.0–11.9: Score 3
+   • > 12.0: Score 4 (critical hepatic failure)
+
+4. CARDIOVASCULAR (MAP and vasopressors):
+   • MAP ≥ 70 mmHg: Score 0
+   • MAP < 70 mmHg: Score 1
+   • Dopamine ≤ 5 or dobutamine: Score 2
+   • Dopamine 5.1–15 or norepinephrine ≤ 0.1: Score 3
+   • Dopamine > 15 or norepinephrine > 0.1: Score 4
+
+5. CENTRAL NERVOUS SYSTEM (Glasgow Coma Scale):
+   • GCS 15: Score 0
+   • GCS 13–14: Score 1
+   • GCS 10–12: Score 2
+   • GCS 6–9: Score 3
+   • GCS < 6: Score 4
+
+6. RENAL (Creatinine mg/dL / Urine output):
+   • Creatinine < 1.2: Score 0
+   • Creatinine 1.2–1.9: Score 1
+   • Creatinine 2.0–3.4: Score 2
+   • Creatinine 3.5–4.9 OR UO < 500 mL/day: Score 3
+   • Creatinine > 5.0 OR UO < 200 mL/day: Score 4
+
+SOFA TOTAL SCORE INTERPRETATION:
+  • SOFA 0–6: Low mortality (< 10%)
+  • SOFA 7–9: Moderate mortality (~15–20%)
+  • SOFA 10–12: High mortality (~40–50%)
+  • SOFA ≥ 13: Very high mortality (> 80%)
+
+═══════════════════════════════════════════════════════════════════════
+SECTION 3: qSOFA (QUICK SOFA — BEDSIDE SCREENING TOOL)
+═══════════════════════════════════════════════════════════════════════
+
+qSOFA Score (1 point each):
+  • Altered mentation (GCS < 15)
+  • Respiratory rate ≥ 22 breaths/min
+  • Systolic blood pressure ≤ 100 mmHg
+
+qSOFA ≥ 2: Warrants further organ dysfunction assessment; associated with higher
+risk of prolonged ICU stay or in-hospital death.
+
+═══════════════════════════════════════════════════════════════════════
+SECTION 4: LABORATORY BIOMARKERS IN SEPSIS
+═══════════════════════════════════════════════════════════════════════
+
+LACTATE (serum):
+  • Normal: < 2.0 mmol/L
+  • Mildly elevated: 2.0–3.9 mmol/L — indicates tissue hypoperfusion; monitor
+  • Septic shock criterion: Lactate > 2.0 mmol/L after adequate resuscitation
+  • Severe hyperlactatemia: Lactate > 4.0 mmol/L — severe tissue ischemia; ICU mandatory
+  • Lactate > 8.0 mmol/L: Critical; associated with high mortality
+  Serial lactate monitoring: Lactate clearance goal > 10% per 2 hours during resuscitation
+
+PROCALCITONIN (PCT):
+  • Normal: < 0.1 ng/mL
+  • PCT 0.1–0.5: Low-grade infection or inflammation
+  • PCT 0.5–2.0: Moderate systemic inflammation; possible sepsis
+  • PCT > 2.0: High probability of sepsis
+  • PCT > 10.0: Severe sepsis/septic shock; bacteremia likely
+
+C-REACTIVE PROTEIN (CRP):
+  • Normal: < 1.0 mg/dL (< 10 mg/L)
+  • Mildly elevated: 1–5 mg/dL — non-specific inflammation
+  • Moderately elevated: 5–20 mg/dL — significant inflammation; infection probable
+  • Severely elevated: > 20 mg/dL — severe systemic infection; sepsis likely
+
+WHITE BLOOD CELL COUNT (WBC):
+  • Normal: 4,500–11,000/µL
+  • Leukocytosis: WBC > 12,000/µL — infection response
+  • Severe leukocytosis: WBC > 30,000/µL — sepsis; leukemoid reaction
+  • Leukopenia: WBC < 4,000/µL — immunosuppression; severe sepsis (poor prognosis)
+  Bands (immature neutrophils) > 10%: Left shift — active bacterial infection
+
+PLATELETS:
+  • Normal: 150,000–400,000/µL
+  • Thrombocytopenia: < 150,000/µL — monitor
+  • Significant: < 100,000/µL — bleeding risk; evaluate for DIC
+  • Critical: < 50,000/µL — spontaneous bleeding risk; platelet transfusion consideration
+  • < 20,000/µL: Severe; immediate intervention
+
+DISSEMINATED INTRAVASCULAR COAGULATION (DIC) IN SEPSIS:
+  • Elevated D-dimer (> 500 ng/mL FEU)
+  • Prolonged PT/INR (INR > 1.5)
+  • Prolonged aPTT
+  • Thrombocytopenia (< 100,000/µL)
+  • Low fibrinogen (< 200 mg/dL)
+  DIC Score (ISTH) ≥ 5: Overt DIC — life-threatening coagulopathy
+
+═══════════════════════════════════════════════════════════════════════
+SECTION 5: SURVIVING SEPSIS CAMPAIGN — HOUR-1 BUNDLE
+═══════════════════════════════════════════════════════════════════════
+
+Within 1 hour of sepsis recognition:
+  1. Measure lactate; re-measure if initial lactate > 2 mmol/L
+  2. Obtain blood cultures before administering antibiotics
+  3. Administer broad-spectrum antibiotics
+  4. Begin rapid fluid resuscitation: 30 mL/kg IV crystalloid for hypotension or lactate ≥ 4 mmol/L
+  5. Apply vasopressors if MAP < 65 mmHg during/after fluid resuscitation (norepinephrine first-line)
+
+SEPTIC SHOCK RESUSCITATION TARGETS:
+  • MAP ≥ 65 mmHg
+  • CVP 8–12 mmHg (12–15 if mechanically ventilated)
+  • ScvO2 ≥ 70%
+  • Urine output ≥ 0.5 mL/kg/h
+  • Lactate normalisation (< 2 mmol/L)
