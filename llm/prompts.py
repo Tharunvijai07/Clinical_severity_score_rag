@@ -32,6 +32,9 @@ _SEVERITY_PROMPT_TEMPLATE = """\
 === PATIENT LABORATORY REPORT ===
 {patient_text}
 
+=== RULE-BASED CLINICAL ANCHORS ===
+{clinical_anchors}
+
 === RETRIEVED MEDICAL GUIDELINE CONTEXT ===
 {context_block}
 
@@ -44,6 +47,7 @@ Return a single, valid JSON object with EXACTLY these keys:
 {{
   "severity_score": <integer 0–10>,
   "severity_level": "<one of: Low | Moderate | High | Critical>",
+  "confidence": <number 0.0–1.0>,
   "key_findings": [
     "<finding 1>",
     "<finding 2>",
@@ -63,9 +67,23 @@ Scoring guide:
   7–8  → High      (severe derangements, hospital admission indicated)
   9–10 → Critical  (life-threatening values, immediate intervention required)
 
+Use Moderate severity when:
+- 1-2 organ systems are mildly or moderately abnormal.
+- There is no clear organ failure, shock, or immediate life-threatening abnormality.
+- The patient requires monitoring, repeat labs, or urgent follow-up but not ICU-level intervention.
+
+Use High severity when:
+- There are significant abnormalities in multiple systems.
+- The patient has high risk of deterioration or likely needs hospital admission.
+
+Use Critical severity when:
+- There are immediate life-threatening abnormalities.
+- There is organ failure, shock physiology, severe hypoxemia, severe acidosis, or dangerous electrolyte derangement.
+
 Rules:
 - severity_score must be an integer (not a float).
 - severity_level must exactly match one of the four options listed.
+- confidence must be a number between 0.0 and 1.0.
 - key_findings must be a JSON array of strings (minimum 1, maximum 10).
 - evidence must be a JSON array of strings citing specific thresholds from the context.
 - summary must be a single string (no embedded newlines).
@@ -77,6 +95,7 @@ Rules:
 def build_severity_prompt(
     patient_text: str,
     context_chunks: list[RetrievedChunk],
+    clinical_anchors: str = "No rule-based clinical anchors provided.",
 ) -> str:
     """
     Build the final user-turn prompt from patient text and retrieved chunks.
@@ -108,5 +127,6 @@ def build_severity_prompt(
 
     return _SEVERITY_PROMPT_TEMPLATE.format(
         patient_text=patient_text.strip(),
+        clinical_anchors=clinical_anchors,
         context_block=context_block,
     )

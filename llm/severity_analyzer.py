@@ -21,6 +21,7 @@ import re
 from dataclasses import dataclass, field
 from typing import Any
 
+from llm.clinical_rules import evaluate_clinical_anchors
 from llm.gemini_client import GeminiClient
 from llm.prompts import SYSTEM_PROMPT, build_severity_prompt
 from rag.retriever import RetrievedChunk
@@ -37,6 +38,7 @@ class SeverityResult:
 
     severity_score: int
     severity_level: str
+    confidence: float
     key_findings: list[str]
     evidence: list[str]
     summary: str
@@ -61,6 +63,7 @@ class SeverityResult:
         return {
             "severity_score": self.severity_score,
             "severity_level": self.severity_level,
+            "confidence":     self.confidence,
             "key_findings":   self.key_findings,
             "evidence":       self.evidence,
             "summary":        self.summary,
@@ -100,7 +103,7 @@ class SeverityAnalyzer:
     def analyze(
         self,
         patient_text: str,
-        context_chunks: list[RetrievedChunk],
+        context_chunks: list[RetrievedChunk] | None = None,
     ) -> SeverityResult:
         """
         Run the full analysis pipeline.
@@ -117,14 +120,22 @@ class SeverityAnalyzer:
         SeverityResult
             Parsed, validated severity assessment.
         """
+        context_chunks = context_chunks or []
+        anchors = evaluate_clinical_anchors(patient_text)
+
         logger.info(
             f"Starting severity analysis — "
             f"patient_text={len(patient_text):,} chars, "
-            f"context_chunks={len(context_chunks)}"
+            f"context_chunks={len(context_chunks)}, "
+            f"anchor={anchors.level} ({anchors.score}/10)"
         )
 
         # 1. Build prompt
-        prompt = build_severity_prompt(patient_text, context_chunks)
+        prompt = build_severity_prompt(
+            patient_text,
+            context_chunks,
+            clinical_anchors=anchors.to_prompt_block(),
+        )
 
         # 2. Call Gemini
         try:
@@ -168,6 +179,12 @@ class SeverityAnalyzer:
             logger.warning(f"Invalid severity_level '{level}', inferring from score.")
             level = self._score_to_level(score)
 
+        confidence = data.get("confidence", 0.0)
+        if not isinstance(confidence, (int, float)):
+            errors.append(f"confidence must be numeric, got: {type(confidence)}")
+            confidence = 0.0
+        confidence = max(0.0, min(1.0, float(confidence)))
+
         findings = data.get("key_findings", [])
         if not isinstance(findings, list):
             findings = [str(findings)]
@@ -184,6 +201,7 @@ class SeverityAnalyzer:
         return SeverityResult(
             severity_score=score,
             severity_level=level,
+            confidence=confidence,
             key_findings=[str(f) for f in findings],
             evidence=[str(e) for e in evidence],
             summary=summary,
@@ -206,6 +224,7 @@ class SeverityAnalyzer:
         return SeverityResult(
             severity_score=0,
             severity_level="Low",
+            confidence=0.0,
             key_findings=["Analysis failed — see error details."],
             evidence=[],
             summary=f"Error during analysis: {error_msg}",

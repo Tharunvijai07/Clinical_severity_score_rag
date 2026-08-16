@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-08-16 11:20:23",
+  "retrieval": {
+    "precision_at_k": {},
+    "recall_at_k": {},
+    "ndcg_at_k": {},
+    "mrr": 0.0,
+    "avg_similarity": 0.0
+  },
+  "llm_output": {
+    "json_validity_rate": 1.0,
+    "schema_compliance_rate": 1.0,
+    "score_range_compliance": 1.0,
+    "level_compliance": 1.0,
+    "avg_parse_errors": 0.0
+  },
+  "clinical_accuracy": {
+    "accuracy": 0.6,
+    "score_mae": 0.6,
+    "score_rmse": 0.7745966692414834,
+    "precision": {
+      "High": 0.5,
+      "Low": 1.0,
+      "Moderate": 0.0,
+      "Critical": 0.5
+    },
+    "recall": {
+      "High": 0.5,
+      "Low": 1.0,
+      "Moderate": 0.0,
+      "Critical": 1.0
+    },
+    "f1": {
+      "High": 0.5,
+      "Low": 1.0,
+      "Moderate": 0.0,
+      "Critical": 0.6666666666666666
+    }
+  },
+  "performance": {
+    "retrieval_latency_ms": 0.0,
+    "llm_latency_ms": 0.0,
+    "total_latency_ms": 0.0,
+    "queries_per_second": 0.0
+  },
+  "consistency": {
+    "level_consistency": 0.0,
+    "score_std_dev": 0.0
+  }
+}
