@@ -583,14 +583,12 @@ if has_pdf:
                 # Severity legend
                 for lvl, (rng, col) in {
                     "🟢 Low (0–4)":       ("0–4",  "#22c55e"),
-                    "🟡 Moderate (5–6)":  ("5–6",  "#eab308"),
-                    "🟠 High (7–8)":      ("7–8",  "#f97316"),
+                    "🟡 Medium (5–8)":    ("5–8",  "#eab308"),
                     "🔴 Critical (9–10)": ("9–10", "#ef4444"),
                 }.items():
                     marker = "◀ Current" if (
                         (rng == "0–4" and result.severity_score <= 4) or
-                        (rng == "5–6" and 5 <= result.severity_score <= 6) or
-                        (rng == "7–8" and 7 <= result.severity_score <= 8) or
+                        (rng == "5–8" and 5 <= result.severity_score <= 8) or
                         (rng == "9–10" and result.severity_score >= 9)
                     ) else ""
                     st.markdown(

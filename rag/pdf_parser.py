@@ -10,6 +10,7 @@ Supports both:
 from __future__ import annotations
 
 import io
+import re
 from pathlib import Path
 from typing import Union
 
@@ -18,6 +19,57 @@ import fitz  # PyMuPDF
 from utils.logger import get_logger
 
 logger = get_logger(__name__)
+
+_PERSONAL_INFO_RE = re.compile(
+    r"(?i)\b(patient|name|age|sex|gender|dob|date of birth|birth date|mrn|medical record|record number|address|phone|mobile|email|doctor|physician|attending|room|bed|unit|ward|admission|discharge|encounter|visit)\b"
+)
+
+_MEDICAL_LABEL_RE = re.compile(
+    r"(?i)\b(creatinine|bun|blood urea nitrogen|potassium|sodium|chloride|bicarbonate|hco3|hemoglobin|hgb|wbc|platelets|alt|ast|bilirubin|inr|lactate|ph|oxygen saturation|spo2|bp|blood pressure|systolic|diastolic|pulse|temperature|resp|respiratory|glucose|albumin|prothrombin|troponin|ammonia|calcium|magnesium|urinalysis|protein|ketones|anion gap)\b"
+)
+
+
+def sanitize_clinical_report_text(text: str) -> str:
+    """Keep only clinical lab values and discard personal/administrative metadata."""
+    if not text or not text.strip():
+        return ""
+
+    cleaned_lines: list[str] = []
+    for raw_line in text.splitlines():
+        line = re.sub(r"\s+", " ", raw_line).strip()
+        if not line:
+            continue
+
+        # Drop known patient-identifying metadata.
+        if _PERSONAL_INFO_RE.search(line):
+            line = re.sub(
+                r"(?i)\b(?:patient|name|age|sex|gender|dob|date of birth|birth date|mrn|medical record|record number|address|phone|mobile|email|doctor|physician|attending|room|bed|unit|ward|admission|discharge|encounter|visit)\b\s*[:=-]?\s*.*",
+                "",
+                line,
+            ).strip()
+            if not line:
+                continue
+
+        # Keep only lines that look like lab/value data, not free-form notes.
+        if not re.search(r"\d", line):
+            continue
+
+        if _MEDICAL_LABEL_RE.search(line):
+            cleaned_lines.append(line)
+            continue
+
+        if re.search(r"(?i)\b[A-Za-z][A-Za-z\-/() .]{0,35}\s*[:=]\s*<?\d+(?:\.\d+)?\b", line):
+            cleaned_lines.append(line)
+            continue
+
+        if re.search(r"(?i)\b\d+(?:\.\d+)?\s*(?:mg/dl|mg/dl|mmol/l|g/dl|mmhg|%|u/l|iu/l|meq/l|ng/ml|pg/ml|k|fl|bpm|°c|c|mmol|g/l)\b", line):
+            cleaned_lines.append(line)
+            continue
+
+    # Remove repeated or noisy labels and normalize spacing.
+    result = "\n".join(cleaned_lines)
+    result = re.sub(r"\n{3,}", "\n\n", result)
+    return result.strip()
 
 
 def extract_text_from_pdf(source: Union[str, Path, bytes, io.BytesIO]) -> str:
@@ -58,8 +110,12 @@ def extract_text_from_pdf(source: Union[str, Path, bytes, io.BytesIO]) -> str:
         doc.close()
 
         full_text = "\n\n".join(pages)
-        logger.info(f"Extracted {len(full_text):,} characters across {len(pages)} non-empty pages.")
-        return full_text
+        sanitized = sanitize_clinical_report_text(full_text)
+        logger.info(
+            f"Extracted {len(full_text):,} chars across {len(pages)} pages; "
+            f"kept {len(sanitized):,} chars after filtering personal metadata."
+        )
+        return sanitized
 
     except Exception as exc:
         logger.error(f"PDF extraction failed: {exc}")
