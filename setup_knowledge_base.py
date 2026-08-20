@@ -14,6 +14,12 @@ import argparse
 import sys
 from pathlib import Path
 
+# Ensure UTF-8 output on Windows consoles
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 # Ensure project root is on path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
@@ -35,9 +41,9 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    print("\n" + "═" * 60)
-    print("  MedSeverity AI — Knowledge Base Setup")
-    print("═" * 60 + "\n")
+    print("\n" + "=" * 60)
+    print("  MedSeverity AI - Knowledge Base Setup")
+    print("=" * 60 + "\n")
 
     pipeline = RAGPipeline()
 

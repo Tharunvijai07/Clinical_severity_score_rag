@@ -29,6 +29,8 @@ def _configure() -> None:
             "<level>{message}</level>"
         ),
         colorize=True,
+        diagnose=True,
+        backtrace=True,
     )
     _CONFIGURED = True
 
