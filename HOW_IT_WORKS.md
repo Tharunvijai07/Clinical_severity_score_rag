@@ -5,7 +5,7 @@
 **MedSeverity AI** is a **Retrieval-Augmented Generation (RAG)** system that analyzes patient clinical data (lab reports or text) and generates a structured severity assessment grounded in medical guidelines. It combines:
 
 - **Vector embeddings** (ChromaDB + sentence-transformers) to retrieve relevant medical guidelines
-- **Gemini LLM** to reason over patient findings + retrieved evidence
+- **OpenRouter-hosted LLM** to reason over patient findings + retrieved evidence
 - **Streamlit UI** for interactive analysis
 
 ---
@@ -45,7 +45,7 @@
 ┌─────────────────────────────────────────────────────────────────┐
 │ ANALYSIS (Step 4)                                                │
 │  • Build LLM prompt: patient text + retrieved guidelines        │
-│  • Call Gemini 2.5 Flash for analysis                          │
+│  • Call OpenRouter model for analysis                           │
 │  • Parse JSON response:                                         │
 │    - severity_score (0–10)                                     │
 │    - severity_level (Low/Moderate/High/Critical)              │
@@ -115,9 +115,9 @@
 
 ### **5. LLM Integration** (`llm/`)
 
-#### **Gemini Client** (`llm/gemini_client.py`)
-- Calls Google's Gemini 2.5 Flash API
-- Handles authentication via `GEMINI_API_KEY` (from `.env`)
+#### **OpenRouter Client** (`llm/gemini_client.py`)
+- Calls OpenRouter's OpenAI-compatible chat completions API
+- Handles authentication via `OPENROUTER_API_KEY` (from `.env`)
 - Returns raw text response from model
 
 #### **Severity Analyzer** (`llm/severity_analyzer.py`)
@@ -128,7 +128,7 @@
    - System prompt (role definition)
    - Patient clinical data
    - Retrieved medical guidelines
-2. Calls Gemini LLM
+2. Calls the configured OpenRouter model
 3. Parses JSON response into `SeverityResult` dataclass
 4. Validates all fields (score 0–10, level in {Low, Moderate, High, Critical})
 
@@ -141,7 +141,7 @@ class SeverityResult:
     key_findings: List[str]      # Abnormalities detected
     evidence: List[str]          # Citations from guidelines
     summary: str                 # Clinical assessment
-    raw_response: str            # Raw Gemini output
+    raw_response: str            # Raw model output
     parse_error: str             # Error message if parsing failed
 ```
 
@@ -149,7 +149,7 @@ class SeverityResult:
 
 ### **6. Prompts** (`llm/prompts.py`)
 Defines:
-- **System prompt** — Instructs Gemini to act as a clinical reasoning engine
+- **System prompt** — Instructs the LLM to act as a clinical reasoning engine
 - **Severity prompt builder** — Combines patient text + retrieved guidelines into a structured prompt
 
 **Example prompt structure:**
@@ -179,8 +179,9 @@ Provide a JSON response with:
 
 ### **7. Configuration** (`utils/config.py`)
 Loads environment variables from `.env`:
-- `GEMINI_API_KEY` — Google Gemini API authentication
-- `GEMINI_MODEL` — Model name (default: `gemini-2.5-flash`)
+- `OPENROUTER_API_KEY` — OpenRouter API authentication
+- `OPENROUTER_MODEL` — Model slug (default: `openai/gpt-4o-mini`)
+- `OPENROUTER_BASE_URL` — OpenRouter API base URL (default: `https://openrouter.ai/api/v1`)
 - `CHROMA_DB_PATH` — Vector store directory
 - `KNOWLEDGE_BASE_PATH` — Medical guidelines directory
 - `EMBEDDING_MODEL` — Sentence encoder (default: `all-MiniLM-L6-v2`)
@@ -250,7 +251,7 @@ Loads environment variables from `.env`:
          │
          ▼
 ┌─────────────────────────┐
-│ Gemini 2.5 Flash        │
+│ OpenRouter Model        │
 │ (LLM reasoning)         │
 └────────┬────────────────┘
          │ raw response
@@ -295,8 +296,9 @@ After build, the vector store is persistent — no rebuild needed unless `--forc
 
 **`.env` file required:**
 ```bash
-GEMINI_API_KEY=<your-api-key-from-aistudio.google.com>
-GEMINI_MODEL=gemini-2.5-flash
+OPENROUTER_API_KEY=<your-openrouter-api-key>
+OPENROUTER_MODEL=openai/gpt-4o-mini
+OPENROUTER_BASE_URL=https://openrouter.ai/api/v1
 CHROMA_DB_PATH=./vectordb
 KNOWLEDGE_BASE_PATH=./knowledge_base
 UPLOADS_PATH=./uploads
@@ -316,7 +318,7 @@ pip install -r requirements.txt
 ```
 
 ### **Step 2: Set API Key**
-Update `.env` with your Gemini API key (get free key from [aistudio.google.com](https://aistudio.google.com/app/apikey))
+Update `.env` with your OpenRouter API key from [openrouter.ai](https://openrouter.ai/keys)
 
 ### **Step 3: Start Streamlit**
 ```bash
@@ -384,7 +386,7 @@ clinical-severity-rag/
 │   └── embedder.py               # Embedding wrapper
 ├── llm/
 │   ├── __init__.py
-│   ├── gemini_client.py          # Gemini API wrapper
+│   ├── gemini_client.py          # OpenRouter API wrapper
 │   ├── severity_analyzer.py      # LLM orchestration
 │   └── prompts.py                # Prompt templates
 ├── utils/
@@ -414,7 +416,7 @@ clinical-severity-rag/
 2. **Step 1:** Pastes a patient case (or uploads lab PDF)
 3. **Step 2:** Text is auto-extracted or entered
 4. **Step 3:** Clicks "Retrieve Medical Guidelines" → App queries vector store → Shows top-5 relevant guidelines with similarity scores
-5. **Step 4:** Clicks "Generate Assessment" → Gemini analyzes patient data + guidelines → Returns:
+5. **Step 4:** Clicks "Generate Assessment" → OpenRouter analyzes patient data + guidelines → Returns:
    - **Severity Score** (0–10 with color gauge)
    - **Severity Level** (Low/Moderate/High/Critical)
    - **Key Findings** (abnormalities detected in patient data)
@@ -442,7 +444,7 @@ In Streamlit sidebar **Settings** → **Retrieved chunks (top-K)**
 ### **Change Model**
 Edit `.env`:
 ```bash
-GEMINI_MODEL=gemini-2.0-pro  # Or another Gemini model
+OPENROUTER_MODEL=anthropic/claude-3.5-sonnet  # Or another OpenRouter model slug
 ```
 
 ### **Change Embedding Model**
@@ -459,7 +461,7 @@ Then rebuild knowledge base.
 | Issue | Cause | Solution |
 |-------|-------|----------|
 | "Knowledge base not ready" | KB hasn't been built | Click "Build Knowledge Base" in sidebar |
-| "Invalid API key" | Missing or wrong GEMINI_API_KEY | Update `.env` with your key from aistudio.google.com |
+| "Invalid API key" | Missing or wrong OPENROUTER_API_KEY | Update `.env` with your key from openrouter.ai |
 | Slow retrieval | Large KB, slow embedding | Adjust CHUNK_SIZE in `.env` or use GPU if available |
 | Poor severity predictions | Irrelevant guidelines | Add more domain-specific documents to `knowledge_base/` |
 | Memory issues | Large PDFs or KB | Increase CHUNK_SIZE or reduce TOP_K_RESULTS |

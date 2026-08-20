@@ -3,7 +3,7 @@ llm/severity_analyzer.py
 ─────────────────────────
 Orchestrates the full LLM-side analysis:
   1. Builds the prompt (patient text + retrieved context)
-  2. Calls Gemini
+  2. Calls OpenRouter
   3. Parses and validates the JSON response
   4. Returns a structured SeverityResult dataclass
 
@@ -22,7 +22,7 @@ from dataclasses import dataclass, field
 from typing import Any
 
 from llm.clinical_rules import evaluate_clinical_anchors
-from llm.gemini_client import GeminiClient
+from llm.gemini_client import OpenRouterClient
 from llm.prompts import SYSTEM_PROMPT, build_severity_prompt
 from rag.retriever import RetrievedChunk
 from utils.logger import get_logger
@@ -34,7 +34,7 @@ _VALID_LEVELS = {"Low", "Moderate", "High", "Critical"}
 
 @dataclass
 class SeverityResult:
-    """Parsed clinical severity assessment returned by Gemini."""
+    """Parsed clinical severity assessment returned by the LLM."""
 
     severity_score: int
     severity_level: str
@@ -89,16 +89,16 @@ def _extract_json(text: str) -> str:
 
 class SeverityAnalyzer:
     """
-    End-to-end severity analysis: prompt building → Gemini → parsed result.
+    End-to-end severity analysis: prompt building -> OpenRouter -> parsed result.
 
     Parameters
     ----------
-    gemini_client : GeminiClient, optional
+    openrouter_client : OpenRouterClient, optional
         Pre-built client; a default one is created if not provided.
     """
 
-    def __init__(self, gemini_client: GeminiClient | None = None) -> None:
-        self._client = gemini_client or GeminiClient()
+    def __init__(self, openrouter_client: OpenRouterClient | None = None) -> None:
+        self._client = openrouter_client or OpenRouterClient()
 
     def analyze(
         self,
@@ -137,14 +137,14 @@ class SeverityAnalyzer:
             clinical_anchors=anchors.to_prompt_block(),
         )
 
-        # 2. Call Gemini
+        # 2. Call OpenRouter
         try:
             raw = self._client.generate(
                 prompt=prompt,
                 system_instruction=SYSTEM_PROMPT,
             )
         except RuntimeError as exc:
-            logger.error(f"Gemini call failed: {exc}")
+            logger.error(f"OpenRouter call failed: {exc}")
             return self._error_result(str(exc), raw_response="")
 
         # 3. Parse JSON
@@ -153,7 +153,7 @@ class SeverityAnalyzer:
     # ── Parsing helpers ────────────────────────────────────────────────────────
 
     def _parse_response(self, raw: str) -> SeverityResult:
-        """Parse and validate Gemini's raw text response → SeverityResult."""
+        """Parse and validate the raw model response → SeverityResult."""
         try:
             json_str = _extract_json(raw)
             data: dict[str, Any] = json.loads(json_str)

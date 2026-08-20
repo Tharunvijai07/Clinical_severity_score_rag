@@ -191,7 +191,7 @@ print(report)
 - Target: < 500 ms
 
 **LLM Latency**
-- Time for Gemini/Groq inference
+- Time for OpenRouter inference
 - Target: < 5 seconds
 
 **Total Latency**
@@ -324,7 +324,7 @@ score = my_custom_metric(retrieved_chunks)
 A: Run `python setup_knowledge_base.py` first to build the vector store.
 
 **Q: LLM metrics show 0% validity**  
-A: Check GROQ_API_KEY environment variable and model output format.
+A: Check OPENROUTER_API_KEY environment variable and model output format.
 
 **Q: Retrieval shows 0% precision**  
 A: Verify ground truth sources match file names in `knowledge_base/`.

@@ -37,10 +37,13 @@ def _path(key: str, default: str) -> Path:
 
 
 # ── API Keys ──────────────────────────────────────────────────────────────────
-GROQ_API_KEY: str = _require("GROQ_API_KEY")
+OPENROUTER_API_KEY: str = _require("OPENROUTER_API_KEY")
 
 # ── Model ─────────────────────────────────────────────────────────────────────
-GROQ_MODEL: str = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
+OPENROUTER_BASE_URL: str = os.getenv(
+    "OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1"
+)
+OPENROUTER_MODEL: str = os.getenv("OPENROUTER_MODEL", "openai/gpt-4o-mini")
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
 CHROMA_DB_PATH: Path        = _path("CHROMA_DB_PATH",        "./vectordb")

@@ -110,7 +110,7 @@ def build_severity_prompt(
     Returns
     -------
     str
-        Formatted prompt ready for Gemini.
+        Formatted prompt ready for the configured LLM.
     """
     if context_chunks:
         formatted_chunks = []
