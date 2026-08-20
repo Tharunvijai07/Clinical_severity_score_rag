@@ -29,7 +29,7 @@ from utils.logger import get_logger
 
 logger = get_logger(__name__)
 
-_VALID_LEVELS = {"Low", "Moderate", "High", "Critical"}
+_VALID_LEVELS = {"Low", "Moderate", "High"}
 
 
 @dataclass
@@ -55,8 +55,7 @@ class SeverityResult:
         return {
             "Low":      "#22c55e",   # green
             "Moderate": "#eab308",   # amber
-            "High":     "#f97316",   # orange
-            "Critical": "#ef4444",   # red
+            "High":     "#ef4444",   # red / orange
         }.get(self.severity_level, "#94a3b8")
 
     def to_dict(self) -> dict[str, Any]:
@@ -211,13 +210,11 @@ class SeverityAnalyzer:
 
     @staticmethod
     def _score_to_level(score: int) -> str:
-        if score <= 4:
+        if score <= 3:
             return "Low"
         elif score <= 6:
             return "Moderate"
-        elif score <= 8:
-            return "High"
-        return "Critical"
+        return "High"
 
     @staticmethod
     def _error_result(error_msg: str, raw_response: str) -> SeverityResult:

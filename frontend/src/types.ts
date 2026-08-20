@@ -1,4 +1,4 @@
-export type SeverityLevel = "Low" | "Moderate" | "High" | "Critical";
+export type SeverityLevel = "Low" | "Moderate" | "High";
 
 export interface RetrievedChunk {
   text: string;

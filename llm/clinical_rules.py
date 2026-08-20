@@ -60,13 +60,11 @@ def _extract_value(text: str, aliases: list[str]) -> float | None:
 
 
 def _level_from_score(score: int) -> str:
-    if score <= 4:
+    if score <= 3:
         return "Low"
     if score <= 6:
         return "Moderate"
-    if score <= 8:
-        return "High"
-    return "Critical"
+    return "High"
 
 
 def evaluate_clinical_anchors(patient_text: str) -> ClinicalAnchorAssessment:

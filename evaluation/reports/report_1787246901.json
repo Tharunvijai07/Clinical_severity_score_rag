@@ -1,0 +1,62 @@
+{
+  "timestamp": "2026-08-20 22:58:21",
+  "retrieval": {
+    "precision_at_k": {
+      "1": 0.4,
+      "3": 0.4666666666666666,
+      "5": 0.48
+    },
+    "recall_at_k": {
+      "1": 0.6,
+      "3": 1.6,
+      "5": 2.6
+    },
+    "ndcg_at_k": {
+      "1": 0.6,
+      "3": 1.1261859507142915,
+      "5": 1.5305682582843736
+    },
+    "mrr": 0.5333333333333333,
+    "avg_similarity": 0.5584386801719665
+  },
+  "llm_output": {
+    "json_validity_rate": 1.0,
+    "schema_compliance_rate": 1.0,
+    "score_range_compliance": 1.0,
+    "level_compliance": 1.0,
+    "avg_parse_errors": 0.0
+  },
+  "clinical_accuracy": {
+    "accuracy": 0.8,
+    "score_mae": 1.0,
+    "score_rmse": 1.1832159566199232,
+    "precision": {
+      "Critical": 0.5,
+      "Low": 1.0,
+      "High": 1.0,
+      "Moderate": 1.0
+    },
+    "recall": {
+      "Critical": 1.0,
+      "Low": 1.0,
+      "High": 0.5,
+      "Moderate": 1.0
+    },
+    "f1": {
+      "Critical": 0.6666666666666666,
+      "Low": 1.0,
+      "High": 0.6666666666666666,
+      "Moderate": 1.0
+    }
+  },
+  "performance": {
+    "retrieval_latency_ms": 20.679980015847832,
+    "llm_latency_ms": 5094.301000004634,
+    "total_latency_ms": 5114.980980020482,
+    "queries_per_second": 0.1955041482863922
+  },
+  "consistency": {
+    "level_consistency": 1.0,
+    "score_std_dev": 0.0
+  }
+}

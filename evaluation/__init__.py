@@ -2,31 +2,29 @@
 evaluation/__init__.py
 ─────────────────────
 Evaluation module for clinical severity RAG system.
-
-Export key components for easy access.
 """
 from evaluation.metrics import (
     RetrievalMetrics,
-    LLMOutputMetrics,
+    GenerationMetrics,
     ClinicalAccuracyMetrics,
     PerformanceMetrics,
     ConsistencyMetrics,
-    EvaluationReport,
+    ComprehensiveRAGReport,
     evaluate_retrieval,
-    evaluate_llm_output_batch,
+    evaluate_generation,
     evaluate_clinical_accuracy,
-    evaluate_consistency,
+    get_rating,
 )
 
 __all__ = [
     "RetrievalMetrics",
-    "LLMOutputMetrics",
+    "GenerationMetrics",
     "ClinicalAccuracyMetrics",
     "PerformanceMetrics",
     "ConsistencyMetrics",
-    "EvaluationReport",
+    "ComprehensiveRAGReport",
     "evaluate_retrieval",
-    "evaluate_llm_output_batch",
+    "evaluate_generation",
     "evaluate_clinical_accuracy",
-    "evaluate_consistency",
+    "get_rating",
 ]

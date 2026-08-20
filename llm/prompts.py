@@ -46,7 +46,7 @@ Return a single, valid JSON object with EXACTLY these keys:
 
 {{
   "severity_score": <integer 0–10>,
-  "severity_level": "<one of: Low | Moderate | High | Critical>",
+  "severity_level": "<one of: Low | Moderate | High>",
   "confidence": <number 0.0–1.0>,
   "key_findings": [
     "<finding 1>",
@@ -61,28 +61,25 @@ Return a single, valid JSON object with EXACTLY these keys:
 }}
 
 Scoring guide:
-  0–2  → Low      (all values within or near reference ranges, no immediate risk)
-  3–4  → Low-Moderate (mild abnormalities, outpatient management)
-  5–6  → Moderate  (significant abnormalities, close monitoring required)
-  7–8  → High      (severe derangements, hospital admission indicated)
-  9–10 → Critical  (life-threatening values, immediate intervention required)
+  0–3  → Low       (all values within or near reference ranges, mild/no risk)
+  4–6  → Moderate  (significant abnormalities, close monitoring or urgent follow-up required)
+  7–10 → High      (severe derangements, acute organ dysfunction or hospital admission indicated)
+
+Use Low severity when:
+- Laboratory values are within reference ranges or exhibit only benign, minor variations.
+- No urgent clinical intervention is required.
 
 Use Moderate severity when:
-- 1-2 organ systems are mildly or moderately abnormal.
-- There is no clear organ failure, shock, or immediate life-threatening abnormality.
-- The patient requires monitoring, repeat labs, or urgent follow-up but not ICU-level intervention.
+- 1-2 organ systems are abnormal with clinically meaningful deviations.
+- Close outpatient monitoring, medication adjustment, or urgent follow-up is warranted.
 
 Use High severity when:
-- There are significant abnormalities in multiple systems.
-- The patient has high risk of deterioration or likely needs hospital admission.
-
-Use Critical severity when:
-- There are immediate life-threatening abnormalities.
-- There is organ failure, shock physiology, severe hypoxemia, severe acidosis, or dangerous electrolyte derangement.
+- There are critical or severe abnormalities across one or more organ systems.
+- Patient demonstrates acute organ dysfunction, severe derangements, or requires hospitalization/intensive care.
 
 Rules:
 - severity_score must be an integer (not a float).
-- severity_level must exactly match one of the four options listed.
+- severity_level must exactly match one of the three options: "Low", "Moderate", or "High".
 - confidence must be a number between 0.0 and 1.0.
 - key_findings must be a JSON array of strings (minimum 1, maximum 10).
 - evidence must be a JSON array of strings citing specific thresholds from the context.

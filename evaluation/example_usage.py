@@ -43,7 +43,7 @@ def example_1_single_query():
     Urine Output: 180 mL/day
     """
     
-    expected_level = "Critical"
+    expected_level = "High"
     expected_sources = {"kidney_disease_guidelines.txt"}
     
     # Initialize
@@ -92,7 +92,7 @@ def example_2_batch_evaluation():
         {
             "name": "AKI",
             "text": "Creatinine 6.2, BUN 120, K 6.8, Urine 150 mL/day",
-            "expected": "Critical",
+            "expected": "High",
         },
         {
             "name": "Liver Failure",

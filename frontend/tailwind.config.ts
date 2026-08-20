@@ -18,7 +18,6 @@ export default {
           low: "#4f8f6a",
           moderate: "#b89b46",
           high: "#c97942",
-          critical: "#b65f5f",
         },
       },
       boxShadow: {

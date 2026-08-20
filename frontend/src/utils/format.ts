@@ -14,7 +14,6 @@ export function severityColor(level: SeverityLevel): string {
     Low: "#4f8f6a",
     Moderate: "#b89b46",
     High: "#c97942",
-    Critical: "#b65f5f",
   }[level];
 }
 
@@ -23,7 +22,6 @@ export function severityTone(level: SeverityLevel): string {
     Low: "border-severity-low bg-green-50 text-green-900",
     Moderate: "border-severity-moderate bg-amber-50 text-amber-950",
     High: "border-severity-high bg-orange-50 text-orange-950",
-    Critical: "border-severity-critical bg-red-50 text-red-950",
   }[level];
 }
 

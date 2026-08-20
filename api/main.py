@@ -48,7 +48,7 @@ class RetrievedChunkResponse(BaseModel):
 
 class SeverityResultResponse(BaseModel):
     severity_score: float = Field(ge=0, le=10)
-    severity_level: Literal["Low", "Moderate", "High", "Critical"]
+    severity_level: Literal["Low", "Moderate", "High"]
     confidence: float
     key_findings: list[str]
     evidence: list[str]

@@ -1,0 +1,36 @@
+{
+  "timestamp": 1787248017.3398578,
+  "retrieval": {
+    "precision_at_k": 0.6799999999999999,
+    "recall_at_k": 1.0,
+    "mrr": 0.7333333333333333,
+    "hit_rate_at_k": 1.0,
+    "ndcg_at_k": 0.9
+  },
+  "generation": {
+    "faithfulness": 0.8777777777777777,
+    "answer_relevancy": 0.8240771626654697,
+    "context_precision": 0.7033333333333334,
+    "context_recall": 1.0,
+    "context_relevancy": 0.7436947435203558
+  },
+  "clinical_accuracy": {
+    "accuracy": 1.0,
+    "score_mae": 1.2,
+    "score_rmse": 1.2649110640673518,
+    "f1": {
+      "Low": 1.0,
+      "Moderate": 1.0,
+      "High": 1.0
+    }
+  },
+  "performance": {
+    "retrieval_ms": 1514.429100009147,
+    "llm_ms": 5241.2162600201555,
+    "total_ms": 6755.6453600293025
+  },
+  "consistency": {
+    "level_consistency": 1.0,
+    "score_std_dev": 0.0
+  }
+}
